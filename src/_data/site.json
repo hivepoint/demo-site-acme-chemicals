@@ -1,0 +1,21 @@
+{
+  "name": "Acme Chemicals",
+  "tagline": "Chemistry That Drives Industry Forward",
+  "description": "Acme Chemicals is a global leader in industrial and specialty chemicals, delivering high-performance solutions for manufacturing, pharmaceuticals, agriculture, and beyond.",
+  "url": "https://acmechemicals.com",
+  "email": "info@acmechemicals.com",
+  "phone": "+1 (800) 555-CHEM",
+  "address": {
+    "street": "2400 Industrial Parkway",
+    "city": "Houston",
+    "state": "TX",
+    "zip": "77002",
+    "country": "USA"
+  },
+  "social": {
+    "linkedin": "https://linkedin.com/company/acme-chemicals",
+    "twitter": "https://twitter.com/acmechemicals"
+  },
+  "founded": "1978",
+  "employees": "4,200+"
+}

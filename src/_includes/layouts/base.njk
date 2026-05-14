@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | {{ site.name }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="main-nav">
+        <a href="/" class="logo">
+          <span class="logo-icon">⬡</span>
+          <span class="logo-text">{{ site.name }}</span>
+        </a>
+        <ul class="nav-links">
+          {% for item in navigation.main %}
+          <li><a href="{{ item.url }}" {% if page.url == item.url %}class="active"{% endif %}>{{ item.label }}</a></li>
+          {% endfor %}
+          <li><a href="/contact/" class="btn btn-primary btn-sm">Get a Quote</a></li>
+        </ul>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-icon">⬡</span>
+            <span class="logo-text">{{ site.name }}</span>
+          </a>
+          <p>{{ site.tagline }}</p>
+          <div class="footer-contact">
+            <p>{{ site.address.street }}<br>
+            {{ site.address.city }}, {{ site.address.state }} {{ site.address.zip }}</p>
+            <p><a href="tel:{{ site.phone }}">{{ site.phone }}</a></p>
+            <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="/products/industrial-solvents/">Industrial Solvents</a></li>
+            <li><a href="/products/specialty-polymers/">Specialty Polymers</a></li>
+            <li><a href="/products/surfactants-emulsifiers/">Surfactants & Emulsifiers</a></li>
+            <li><a href="/products/water-treatment-chemicals/">Water Treatment</a></li>
+            <li><a href="/products/adhesives-sealants/">Adhesives & Sealants</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="/industries/manufacturing/">Manufacturing</a></li>
+            <li><a href="/industries/pharmaceuticals/">Pharmaceuticals</a></li>
+            <li><a href="/industries/food-beverage/">Food & Beverage</a></li>
+            <li><a href="/industries/electronics/">Electronics</a></li>
+            <li><a href="/industries/agriculture/">Agriculture</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/company/">About Us</a></li>
+            <li><a href="/sustainability/">Sustainability</a></li>
+            <li><a href="/safety/">Safety & SDS</a></li>
+            <li><a href="/careers/">Careers</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {{ "" | year }} {{ site.name }}. All rights reserved.</p>
+        <ul class="footer-legal">
+          {% for item in navigation.footer %}
+          <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

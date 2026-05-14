@@ -1,0 +1,148 @@
+---
+layout: layouts/base.njk
+title: Contact Us
+description: Contact Acme Chemicals for product inquiries, technical support, samples, or custom formulation requests. Our team responds within one business day.
+permalink: /contact/
+---
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <span>Contact</span>
+    </div>
+    <h1>Let's Start a Conversation</h1>
+    <p class="lead">Whether you need a product sample, a custom formulation quote, or just want to talk to a chemist about your application — we're here.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-form">
+        <h2>Send us a message</h2>
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first_name" placeholder="Elena" required>
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last_name" placeholder="Rodriguez" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Business Email</label>
+            <input type="email" id="email" name="email" placeholder="elena.rodriguez@company.com" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="Your company">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inquiry-type">Inquiry Type</label>
+            <select id="inquiry-type" name="inquiry_type">
+              <option value="">Select a topic...</option>
+              <option value="product">Product Information</option>
+              <option value="sample">Request a Sample</option>
+              <option value="quote">Request a Quote</option>
+              <option value="custom">Custom Formulation</option>
+              <option value="technical">Technical Support</option>
+              <option value="regulatory">Regulatory / SDS</option>
+              <option value="careers">Careers</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your application, the chemicals you're looking for, and any specific requirements..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%">Send Message</button>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <h2>Get in touch directly</h2>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🏢</div>
+          <div class="contact-info-content">
+            <h4>Global Headquarters</h4>
+            <p>2400 Industrial Parkway<br>Houston, TX 77002, USA</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📞</div>
+          <div class="contact-info-content">
+            <h4>Phone</h4>
+            <p>+1 (800) 555-CHEM<br>Mon–Fri, 7am–7pm CT</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">✉️</div>
+          <div class="contact-info-content">
+            <h4>Email</h4>
+            <p>info@acmechemicals.com<br>technical@acmechemicals.com</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">⚡</div>
+          <div class="contact-info-content">
+            <h4>24/7 Safety Hotline</h4>
+            <p>+1 (800) 555-SAFE<br>For chemical emergency response</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Regional Offices</h3>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🇩🇪</div>
+          <div class="contact-info-content">
+            <h4>Europe (EMEA)</h4>
+            <p>Acme Chemicals GmbH<br>Industriestraße 45, Frankfurt, Germany<br>+49 69 555 0100</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🇨🇳</div>
+          <div class="contact-info-content">
+            <h4>Asia-Pacific</h4>
+            <p>Acme Chemicals (Shanghai) Co., Ltd.<br>Pudong New Area, Shanghai 200120<br>+86 21 6886 7700</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="overline">FAQ</span>
+      <h2>Common questions</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 900px; margin: 0 auto;">
+      <div>
+        <h3>How quickly can I get samples?</h3>
+        <p style="color: var(--color-text-secondary); font-size: 0.95rem;">Standard product samples are typically shipped within 3–5 business days. For custom formulation samples, allow 4–6 weeks for development and testing.</p>
+      </div>
+      <div>
+        <h3>Do you offer minimum order quantities?</h3>
+        <p style="color: var(--color-text-secondary); font-size: 0.95rem;">MOQs vary by product. Most specialty grades start at 25kg or 25L. Bulk and commodity products are available at any quantity from contract quantities to spot orders.</p>
+      </div>
+      <div>
+        <h3>Can you provide SDS and TDS documents?</h3>
+        <p style="color: var(--color-text-secondary); font-size: 0.95rem;">Yes. Safety Data Sheets and Technical Datasheets are available for all products on our Safety portal, or on request for proprietary formulations.</p>
+      </div>
+      <div>
+        <h3>What is your lead time for bulk orders?</h3>
+        <p style="color: var(--color-text-secondary); font-size: 0.95rem;">Standard stocked products: 3–7 days. Make-to-order specialty grades: 3–6 weeks. We also offer VMI programs to eliminate lead time concerns for high-volume customers.</p>
+      </div>
+    </div>
+  </div>
+</section>

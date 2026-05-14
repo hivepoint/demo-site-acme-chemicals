@@ -1,0 +1,80 @@
+---
+layout: layouts/base.njk
+title: Products
+description: Browse Acme Chemicals' comprehensive portfolio of industrial solvents, specialty polymers, surfactants, water treatment chemicals, and adhesives.
+permalink: /products/
+---
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <span>Products</span>
+    </div>
+    <h1>Our Product Portfolio</h1>
+    <p class="lead">High-performance chemicals engineered for precision, reliability, and compliance across the world's most demanding industries.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="card-grid">
+      {% for product in collections.products | reverse %}
+      <article class="card">
+        <div class="card-image">
+          <img src="{{ product.data.image }}" alt="{{ product.data.title }}" loading="lazy">
+        </div>
+        <div class="card-content">
+          <span class="card-tag">{{ product.data.category }}</span>
+          <h3>{{ product.data.title }}</h3>
+          <p>{{ product.data.excerpt }}</p>
+          <a href="{{ product.url }}" class="card-link">View Product Details</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="overline">Quality Assurance</span>
+      <h2>Every product. Every batch. Every time.</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🏭</div>
+        <h3>GMP Manufacturing</h3>
+        <p>All products are manufactured under Good Manufacturing Practices with full traceability from raw material to finished good.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📋</div>
+        <h3>Full Documentation</h3>
+        <p>Certificates of Analysis, Safety Data Sheets, and technical datasheets available for every product, every batch.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🧪</div>
+        <h3>In-House Testing</h3>
+        <p>Our accredited laboratories perform over 600 individual quality checks before any product leaves our facilities.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🌍</div>
+        <h3>Global Compliance</h3>
+        <p>Full compliance with REACH, RoHS, FDA, and regional chemical regulations in all 80+ markets we serve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Need a custom formulation?</h2>
+    <p>Our R&D team can develop tailored chemical solutions to meet your specific performance, regulatory, and sustainability requirements.</p>
+    <div class="cta-buttons">
+      <a href="/contact/" class="btn btn-primary btn-lg">Talk to a Chemist</a>
+      <a href="/safety/" class="btn btn-white btn-lg">Download SDS Sheets</a>
+    </div>
+  </div>
+</section>

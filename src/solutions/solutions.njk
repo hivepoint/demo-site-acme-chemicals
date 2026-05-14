@@ -1,0 +1,70 @@
+---
+layout: layouts/base.njk
+title: Solutions
+description: Acme Chemicals end-to-end chemical solutions — custom formulation, regulatory compliance support, supply chain management, and technical services.
+permalink: /solutions/
+---
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <span>Solutions</span>
+    </div>
+    <h1>Solutions Built Around You</h1>
+    <p class="lead">More than a chemical supplier — a formulation partner. We work alongside your team from initial concept through scale-up, compliance, and ongoing supply.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="card-grid">
+      {% for solution in collections.solutions | reverse %}
+      <article class="card">
+        <div class="card-image">
+          <img src="{{ solution.data.image }}" alt="{{ solution.data.title }}" loading="lazy">
+        </div>
+        <div class="card-content">
+          <span class="card-tag">{{ solution.data.category }}</span>
+          <h3>{{ solution.data.title }}</h3>
+          <p>{{ solution.data.excerpt }}</p>
+          <a href="{{ solution.url }}" class="card-link">Explore Solution</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="two-col">
+      <div class="two-col-content">
+        <h2>Our solution delivery process</h2>
+        <p>Every Acme Chemicals engagement begins with deep technical discovery. We don't sell products — we solve problems. Our structured approach ensures every recommendation is grounded in your specific process, regulatory environment, and performance requirements.</p>
+        <ul class="check-list">
+          <li>Technical needs assessment and site visit</li>
+          <li>Laboratory screening and formulation development</li>
+          <li>Pilot-scale validation and process optimization</li>
+          <li>Regulatory documentation and compliance support</li>
+          <li>Commercial scale-up and ongoing supply management</li>
+        </ul>
+      </div>
+      <div class="two-col-image">
+        <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=600&h=450&fit=crop" alt="Chemical research and development laboratory" style="border-radius: 20px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Tell us about your challenge</h2>
+    <p>Our applications team is ready to discuss your formulation goals. No commitment required — just a conversation.</p>
+    <div class="cta-buttons">
+      <a href="/contact/" class="btn btn-primary btn-lg">Start a Conversation</a>
+      <a href="/company/" class="btn btn-white btn-lg">About Our Experts</a>
+    </div>
+  </div>
+</section>

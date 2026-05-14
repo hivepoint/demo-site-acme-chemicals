@@ -1,0 +1,80 @@
+---
+layout: layouts/base.njk
+title: Industries
+description: Acme Chemicals serves manufacturing, pharmaceuticals, food & beverage, electronics, and agriculture industries with specialized chemical solutions.
+permalink: /industries/
+---
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <span>Industries</span>
+    </div>
+    <h1>Deep Expertise Across Every Sector</h1>
+    <p class="lead">Our dedicated industry teams bring decades of domain knowledge to every engagement — understanding your regulations, processes, and performance standards inside and out.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="card-grid">
+      {% for industry in collections.industries | reverse %}
+      <article class="card">
+        <div class="card-image">
+          <img src="{{ industry.data.image }}" alt="{{ industry.data.title }}" loading="lazy">
+        </div>
+        <div class="card-content">
+          <span class="card-tag card-tag-warm">{{ industry.data.category }}</span>
+          <h3>{{ industry.data.title }}</h3>
+          <p>{{ industry.data.excerpt }}</p>
+          <a href="{{ industry.url }}" class="card-link">Explore Industry</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="overline">Our Credentials</span>
+      <h2>Certifications that matter to your industry</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🏅</div>
+        <h3>ISO 9001:2015</h3>
+        <p>Quality management system certification across all manufacturing facilities and laboratories.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🧬</div>
+        <h3>GMP / ICH Q7</h3>
+        <p>Pharmaceutical-grade manufacturing in dedicated GMP-compliant facilities for API excipient production.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🌿</div>
+        <h3>REACH / RoHS</h3>
+        <p>Full SVHC assessment and REACH registration for all high-volume substances. RoHS-compliant grades available.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🍃</div>
+        <h3>Kosher & Halal</h3>
+        <p>Certified food-grade and specialty grades with both Kosher (OU) and Halal (IFANCA) certification.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Connect with your industry specialist</h2>
+    <p>Each of our industry teams is staffed by chemists and engineers with 15+ years of sector-specific experience.</p>
+    <div class="cta-buttons">
+      <a href="/contact/" class="btn btn-primary btn-lg">Find Your Specialist</a>
+      <a href="/products/" class="btn btn-white btn-lg">Browse Products</a>
+    </div>
+  </div>
+</section>

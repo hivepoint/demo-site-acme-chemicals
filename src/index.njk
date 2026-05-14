@@ -1,0 +1,230 @@
+---
+layout: layouts/base.njk
+title: Home
+description: Acme Chemicals — global leader in industrial and specialty chemicals. High-performance solvents, polymers, surfactants, and water treatment solutions.
+---
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Chemistry That Powers <em>Industry</em></h1>
+        <p class="lead">From precision specialty chemicals to large-scale industrial formulations, Acme Chemicals delivers performance, safety, and sustainability at every scale.</p>
+        <div class="hero-buttons">
+          <a href="/products/" class="btn btn-primary btn-lg">Explore Products</a>
+          <a href="/contact/" class="btn btn-secondary btn-lg">Request a Sample</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=720&h=520&fit=crop" alt="Chemical laboratory with precision equipment" width="720" height="520">
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number">46+</div>
+        <div class="stat-label">Years of Innovation</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">8,500+</div>
+        <div class="stat-label">Products Formulated</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">80+</div>
+        <div class="stat-label">Countries Served</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="overline">Our Portfolio</span>
+      <h2>High-performance chemical solutions</h2>
+      <p>From industrial solvents to advanced polymers, our comprehensive product range meets the most demanding application requirements across every sector.</p>
+    </div>
+    <div class="card-grid">
+      {% for product in collections.products %}
+      <article class="card">
+        <div class="card-image">
+          <img src="{{ product.data.image }}" alt="{{ product.data.title }}" loading="lazy">
+        </div>
+        <div class="card-content">
+          <span class="card-tag">{{ product.data.category }}</span>
+          <h3>{{ product.data.title }}</h3>
+          <p>{{ product.data.excerpt }}</p>
+          <a href="{{ product.url }}" class="card-link">View Product</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Acme -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="overline">Why Acme Chemicals</span>
+      <h2>Built on science. Proven in the field.</h2>
+      <p>For over four decades, manufacturers and processors worldwide have trusted Acme Chemicals for consistent quality, technical expertise, and responsive service.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🔬</div>
+        <h3>World-Class R&D</h3>
+        <p>Our 320-strong team of chemists and engineers continuously innovates, with over 180 active patents protecting our most advanced formulations.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">✅</div>
+        <h3>ISO & REACH Certified</h3>
+        <p>All products meet ISO 9001:2015, REACH, and RoHS standards. We proactively monitor evolving global chemical regulations so you don't have to.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🌿</div>
+        <h3>Sustainability-First</h3>
+        <p>35% of our portfolio is bio-derived or biodegradable. Our net-zero roadmap targets carbon neutrality across all manufacturing by 2040.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🚚</div>
+        <h3>Reliable Supply Chain</h3>
+        <p>With 12 manufacturing plants and 40+ regional distribution centers, we guarantee consistent supply with 99.2% on-time delivery performance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Industries Section -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="overline">Industries We Serve</span>
+      <h2>Chemistry for every <em>application</em></h2>
+      <p>Our deep domain expertise spans the full spectrum of modern industry, with dedicated technical teams for each vertical market.</p>
+    </div>
+    <div class="card-grid">
+      {% for industry in collections.industries %}
+      <article class="card">
+        <div class="card-image">
+          <img src="{{ industry.data.image }}" alt="{{ industry.data.title }}" loading="lazy">
+        </div>
+        <div class="card-content">
+          <span class="card-tag card-tag-warm">{{ industry.data.category }}</span>
+          <h3>{{ industry.data.title }}</h3>
+          <p>{{ industry.data.excerpt }}</p>
+          <a href="{{ industry.url }}" class="card-link">Learn More</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="testimonial">
+      <p class="testimonial-quote">Acme Chemicals has been our sole-source supplier for specialty surfactants for eleven years. Their technical support team is second to none, and product consistency across batches is remarkable. Switching was never a consideration.</p>
+      <p class="testimonial-author">David Okonkwo</p>
+      <p class="testimonial-role">VP of Procurement, Nexus Manufacturing Group</p>
+    </div>
+  </div>
+</section>
+
+<!-- Solutions Section -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="overline">Solutions</span>
+      <h2>End-to-end chemical solutions</h2>
+      <p>We don't just sell chemicals — we solve problems. Our solutions teams partner with you from formulation to scale-up to regulatory compliance.</p>
+    </div>
+    <div class="card-grid">
+      {% for solution in collections.solutions %}
+      <article class="card">
+        <div class="card-image">
+          <img src="{{ solution.data.image }}" alt="{{ solution.data.title }}" loading="lazy">
+        </div>
+        <div class="card-content">
+          <span class="card-tag">{{ solution.data.category }}</span>
+          <h3>{{ solution.data.title }}</h3>
+          <p>{{ solution.data.excerpt }}</p>
+          <a href="{{ solution.url }}" class="card-link">View Solution</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Sustainability Banner -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="two-col">
+      <div class="two-col-content">
+        <h2>Our <em>Commitment</em> to a Greener Future</h2>
+        <p style="color: rgba(255,255,255,0.7)">Acme Chemicals is leading the charge toward sustainable industrial chemistry. We invest 18% of annual revenue in green chemistry research, bio-based alternatives, and waste reduction programs.</p>
+        <ul class="check-list">
+          <li style="color: rgba(255,255,255,0.7)">Carbon-neutral manufacturing by 2040</li>
+          <li style="color: rgba(255,255,255,0.7)">100% renewable energy in all plants by 2032</li>
+          <li style="color: rgba(255,255,255,0.7)">Zero liquid discharge at 8 facilities today</li>
+          <li style="color: rgba(255,255,255,0.7)">35% bio-based product portfolio</li>
+        </ul>
+        <br>
+        <a href="/sustainability/" class="btn btn-primary">Read Our ESG Report</a>
+      </div>
+      <div class="two-col-image">
+        <img src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?w=600&h=450&fit=crop" alt="Sustainable green chemistry" style="border-radius: 20px; box-shadow: 0 12px 40px rgba(0,0,0,0.3);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Latest Blog Posts -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="overline">Insights</span>
+      <h2>From our lab to your inbox</h2>
+      <p>Technical guides, industry trends, and regulatory updates from our team of chemical experts.</p>
+    </div>
+    <div class="card-grid">
+      {% set posts = collections.blog | reverse %}
+      {% for post in posts | batch(3) | first %}
+      <article class="card">
+        <div class="card-image">
+          <img src="{{ post.data.image }}" alt="{{ post.data.title }}" loading="lazy">
+        </div>
+        <div class="card-content">
+          <span class="card-tag">{{ post.data.category }}</span>
+          <h3>{{ post.data.title }}</h3>
+          <p>{{ post.data.excerpt }}</p>
+          <div class="blog-meta" style="margin-top: auto; font-size: 0.82rem; color: var(--color-text-muted)">
+            <span>{{ post.date | dateFormat }}</span>
+            <span>·</span>
+            <span>{{ post.data.author }}</span>
+          </div>
+          <a href="{{ post.url }}" class="card-link" style="margin-top: 0.75rem">Read Article</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <div style="text-align: center; margin-top: 2.5rem;">
+      <a href="/blog/" class="btn btn-secondary">View All Articles</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to elevate your <em>formulation</em>?</h2>
+    <p>Connect with our technical team for a free consultation, product samples, or a custom formulation quote.</p>
+    <div class="cta-buttons">
+      <a href="/contact/" class="btn btn-primary btn-lg">Request a Quote</a>
+      <a href="/products/" class="btn btn-white btn-lg">Browse Products</a>
+    </div>
+  </div>
+</section>

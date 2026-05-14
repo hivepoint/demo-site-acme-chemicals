@@ -1,0 +1,16 @@
+{
+  "main": [
+    { "label": "Products", "url": "/products/" },
+    { "label": "Solutions", "url": "/solutions/" },
+    { "label": "Industries", "url": "/industries/" },
+    { "label": "Sustainability", "url": "/sustainability/" },
+    { "label": "Company", "url": "/company/" },
+    { "label": "Blog", "url": "/blog/" }
+  ],
+  "footer": [
+    { "label": "Privacy Policy", "url": "/privacy/" },
+    { "label": "Terms of Service", "url": "/terms/" },
+    { "label": "Safety Data Sheets", "url": "/safety/" },
+    { "label": "Contact", "url": "/contact/" }
+  ]
+}
