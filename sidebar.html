@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    :root {
+      --nv-font-title-family: -apple-system, sans-serif;
+      --nv-font-title-weight: 500;
+      --nv-font-body-family: -apple-system, sans-serif;
+      --nv-font-body-weight: 400;
+
+      --nv-sys-color-primary: #00897B;
+      --nv-sys-color-on-primary: #FFFFFF;
+      --nv-sys-color-primary-container: #8DF5E4;
+      --nv-sys-color-on-primary-container: #0d1f2d;
+      --nv-sys-color-secondary: #625B71;
+      --nv-sys-color-on-secondary: #FFFFFF;
+      --nv-sys-color-secondary-container: #f7f9f8;
+      --nv-sys-color-on-secondary-container: #4A4358;
+      --nv-sys-color-tertiary: #7D5260;
+      --nv-sys-color-on-tertiary: #FFFFFF;
+      --nv-sys-color-tertiary-container: #FFD9E3;
+      --nv-sys-color-on-tertiary-container: #633B48;
+      --nv-sys-color-error: #B4271F;
+      --nv-sys-color-on-error: #FFFFFF;
+      --nv-sys-color-error-container: #FFDAD5;
+      --nv-sys-color-on-error-container: #910809;
+
+      --nv-sys-color-surface: #ffffff;
+      --nv-sys-color-surface-variant: #E7E0EC;
+
+      --nv-sys-color-surface-container-lowest: #eef3f6;
+      --nv-sys-color-surface-container-low: #F7F2FA;
+      --nv-sys-color-surface-container: #f7f9f8;
+      --nv-sys-color-surface-container-high: #ECE6F0;
+      --nv-sys-color-surface-container-highest: #E6E0E9;
+
+      --nv-sys-color-on-surface: #1D1B20;
+      --nv-sys-color-on-surface-variant: #49454F;
+
+      --nv-sys-color-outline: #79747E;
+      --nv-sys-color-outline-variant: #CAC4D0;
+
+      --nv-sys-color-inverse-surface: #322F35;
+      --nv-sys-color-inverse-on-surface: #F5EFF7;
+      --nv-sys-color-inverse-primary: #CFBCFF;
+
+      --nv-sys-color-scrim: #000000;
+    }
+  </style>
+</head>
+
+<body>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --nv-sidebar-scroll-top-offset: 68px;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: var(--nv-font-body-family);
+      font-weight: var(--nv-font-body-weight);
+    }
+
+    .nv-sidebar {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      width: 100%;
+      background-color: var(--nv-sys-color-surface);
+      color: var(--nv-sys-color-on-surface);
+      font-family: var(--nv-font-body-family);
+      font-weight: var(--nv-font-body-weight);
+      box-sizing: border-box;
+      margin: 0 auto;
+      position: relative;
+      max-width: 48rem;
+    }
+
+    .nv-sidebar *,
+    .nv-sidebar *::before,
+    .nv-sidebar *::after {
+      box-sizing: inherit;
+    }
+
+    .nv-header {
+      display: flex;
+      align-items: center;
+      min-height: 52px;
+      padding: 0 16px;
+      background-color: var(--nv-sys-color-surface-container);
+      border-bottom: 0.5px solid var(--nv-sys-color-outline);
+      gap: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    .nv-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background-color: var(--nv-sys-color-primary-container);
+      border-radius: 4px;
+      color: var(--nv-sys-color-on-primary-container);
+    }
+
+    .nv-logo svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .nv-brand {
+      font-family: var(--nv-font-title-family);
+      font-weight: bold;
+      font-size: 14px;
+      color: var(--nv-sys-color-on-surface);
+      white-space: nowrap;
+    }
+
+    .nv-hero {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--nv-sys-color-secondary-container);
+      color: var(--nv-sys-color-on-secondary-container);
+      padding: 32px 24px;
+      gap: 16px;
+    }
+
+    .nv-eyebrow {
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.85;
+    }
+
+    .nv-title {
+      font-family: var(--nv-font-title-family);
+      font-weight: var(--nv-font-title-weight);
+      font-size: 26px;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .nv-description {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+      opacity: 0.9;
+    }
+
+    .nv-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .nv-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      color: var(--nv-sys-color-on-secondary-container);
+      border: 1px solid color-mix(in srgb, var(--nv-sys-color-on-secondary-container) 40%, transparent);
+      border-radius: 9999px;
+      padding: 8px 14px;
+      font-size: 12px;
+      font-family: inherit;
+      line-height: 1.2;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    #navu-chat {
+      flex: 1;
+      padding: 24px 0;
+    }
+  </style>
+  <div class="nv-sidebar">
+    <header class="nv-header">
+      <div class="nv-logo">
+        <svg xmlns="http://www.w3.org/polymorphic" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <div class="nv-brand">CHEM BOT</div>
+      <div style="flex: 1"></div>
+      <a href="#navu/chat/new">
+        <nui-icon-button size="s" squared ?disabled=${this.disabled} label="New Chat" @click=${this._decrement}>
+          <nui-icon>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" preserveAspectRatio="xMidYMid meet"
+              focusable="false">
+              <path
+                d="M120-160v-600q0-33 23.5-56.5T200-840h480q33 0 56.5 23.5T760-760v203q-10-2-20-2.5t-20-.5q-10 0-20 .5t-20 2.5v-203H200v400h283q-2 10-2.5 20t-.5 20q0 10 .5 20t2.5 20H240L120-160Zm160-440h320v-80H280v80Zm0 160h200v-80H280v80Zm400 280v-120H560v-80h120v-120h80v120h120v80H760v120h-80ZM200-360v-400 400Z" />
+            </svg>
+          </nui-icon>
+        </nui-icon-button>
+        <nui-tooltip position="bottom">New Chat</nui-tooltip>
+      </a>
+      <a href="#navu/sidebar/close">
+        <nui-icon-button size="s" squared ?disabled=${this.disabled} label="Close" @click=${this._decrement}>
+          <nui-icon>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" preserveAspectRatio="xMidYMid meet"
+              focusable="false">
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg>
+          </nui-icon>
+        </nui-icon-button>
+        <nui-tooltip position="bottom">Close</nui-tooltip>
+      </a>
+    </header>
+
+    <div class="nv-hero">
+      <div class="nv-eyebrow">Industrial Chemical Solutions</div>
+      <h1 class="nv-title">Ask me anything about Acme Chemicals.</h1>
+      <p class="nv-description">I'm here to help you navigate our high-performance solutions. Ask me about our
+        industrial solvents, polymers, surfactants, or water treatment products.</p>
+
+      <div class="nv-chips">
+        <button class="nv-chip">Industrial solvents</button>
+        <button class="nv-chip">Water treatment solutions</button>
+        <button class="nv-chip">Sustainable polymers</button>
+        <button class="nv-chip">Surfactant products</button>
+        <button class="nv-chip">Request a quote</button>
+      </div>
+    </div>
+
+    <div id="navu-chat"></div>
+  </div>
+  <!-- <script type="module" src="/src/products/sidebar/sidebar.ts"></script> -->
+</body>
+
+</html>
