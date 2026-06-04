@@ -20,7 +20,7 @@
       --nv-sys-color-on-secondary-container: #4A4358;
       --nv-sys-color-tertiary: #7D5260;
       --nv-sys-color-on-tertiary: #FFFFFF;
-      --nv-sys-color-tertiary-container: #FFD9E3;
+      --nv-sys-color-tertiary-container: rgba(0, 137, 123, 0.5);
       --nv-sys-color-on-tertiary-container: #633B48;
       --nv-sys-color-error: #B4271F;
       --nv-sys-color-on-error: #FFFFFF;
@@ -68,6 +68,14 @@
       margin: 0;
       padding: 0;
       height: 100%;
+    }
+
+    html {
+      scrollbar-width: none;
+    }
+
+    html::-webkit-scrollbar {
+      display: none;
     }
 
     body {
